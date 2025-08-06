@@ -1,0 +1,257 @@
+
+------------------------->    this is section is for uset input (like stdin in c (scanf()))    ------------------------->
+
+if you want user input you have to import a class called Scanner like that ->  import java.util.Scanner;
+
+and you have to creat a real object from this classe like this -> Scanner input = new Scanner(System.in); -> System.in id for like stdin in c -> in this example i give my object  name (input)
+
+and then you have to call method from this object you have created and each data has a specife method 
+
+input.nextLine() -> this is for string input 
+
+input.next() -> this is for string input also but she return until space for examplr if you enter bro code you will get just bro 
+
+input.nextInt() -> this is for integer input 
+
+input.nextDouble() -> this is for Double input 
+
+input.nextfloat() -> this is for float input
+
+and i think there is also for char (if you neede it search for it )
+
+dont forget to close the object like this -> input.close();
+
+
+
+
+------------------------->    this is section for generate random number   ------------------------->
+
+if you want to generate random number you hvae to import a class called Random like that ->  import java.util.Random;
+
+and you have to creat a real object from this classe like this -> Random rando = new Random();
+
+like the Scanner before each data type number like int float double has its own methods (i dont know if there is methos for string )
+
+int number = random.nextInt() -> this give you random number but this numbers is so long 
+
+int number = random.nextInt(1, 7) -> this is will give uou random number between 1 and 7 (but 7 not included so he never give you 7)
+
+and there is other methods for boolran or double
+
+boolean is_correct = random.nextboolean() -> this is will give random maybe true or false
+
+
+
+------------------------->    this is section math operation like power  ------------------------->
+
+if you need any methos like you want a power b or anything just go to w3school and see all the methods
+
+and also you dont have to import anything just use Math clase 
+
+for example: int result = Math.pow(2, 5); -> so now result = 32;
+
+
+
+
+------------------------->    this is section we see that there is printf method  ------------------------->
+
+there is na method called printf, it's like the printf in C 
+
+to use it like this -> System.out.printf();
+
+
+------------------------->    this is section we will see string methos ------------------------->
+
+String name = "oussama";
+
+name.length() -> this method return the lenght of an string
+
+name.charAt(i) -> this method return char in a specif index (line str[i] in C)
+
+name.indexof() -> this method is search of an chartere of string inside an string and return the index of it or -1 if it's not exist in the string
+
+name.lastIndexOf() -> like the previous method but it start seaech from the enf og the string not the beginning
+
+name.toUpperCase() -> bayna chno kadir katrja3 string upper case walakin makatbdlch f dak string nit
+
+name.toLowerCase() -> bayna chno kadir katrja3 string lower case walakin makatbdlch f dak string nit
+
+name.trim() -> bhal strtrim f C kathayd les espace li f bdya o f lakhr o hta  makatbdlch f dak string nit 
+
+name.replace("O", "A") -> hadi aya O lagatha f string 4adi tbdlo b A
+
+name.isEmpty() -> hadi katchof wach strig khawi katreturn true lakan khawi o false la kan 3amr (bahl had check li kandiro f C str[0] == '\0)
+
+name.contains("A") -> hadi kat9alb  
+
+name.equals(str) -> hadi bhasl strcmp kat9arn bin name o str ila kano bhal bhal katraj3 true l3aks false
+
+
+name.equalsIgnoreCase() -> hadi bhal lakhra (equals) 4ir hadi makadihache f ila kan upper ole lower case so 3andha bhal oussama bhal 
+
+name.substring() -> t9dar 3tiha 2 index whad dyal start o wahd dyal end o 4adi rja3 lk string jdid mn start index hta end index mn dak string (name) ola t9dar t3iha 4ir index wahd o 4adi trod lk string mn dak index hta lakhr 
+
+
+
+------------------------->    this is section we will see ternary operator ------------------------->
+
+
+(condition) ? isTrue : isFalse 
+
+For example -> weight >= 80 ? "you weight is long" : "you weight is good" 
+
+
+in the example if the weight is >= 80 will return "you weight is long" and if it false will return "you weight is good"
+
+you can use ternaty operator inside ternary operator also
+
+
+
+------------------------->    this is section we will swich  ------------------------->
+
+1-normal swicth 
+
+int day = 2;
+String name;
+	|
+	v
+
+switch (day) {
+    case 1:
+        name = "Monday";
+        break;
+    case 2:
+        name = "Tuesday";
+        break;
+    case 3:
+        name = "Wednesday";
+        break;
+    default:
+        name = "Invalid";
+}
+
+mochkil dyal had switch how anaha khask kola maratb9a dir break, hit ila madrtihach 4adi excute dik case o cases li taht mnha kamlin
+f dak exampel nit day = 2 so 4adi mchi case 2 o 4adi di name = "Monday"; o 4adi mchi les cases li taht mnha kalmin so f lakhr name 4adi twli fih "invalid" hadchi 3lach khask tb9a dur break les cases kamlin bach mli excutehom ikhroj mn switch 
+
+
+
+2-Enhanced switch (New Way in Java 14+)
+
+
+int day = 2;
+
+String name = switch (day) {
+    case 1 -> "Monday";
+    case 2 -> "Tuesday";
+    case 3 -> "Wednesday";
+    default -> "Invalid";
+};
+
+so hna mathtach tb9a dir break hadi shal o hsan o safe
+
+o hta t9dar tjma3 bzaf dyal les case f whda 
+
+for examples: f had metal li taht ana n9adro njm3o bzaf dyal les case ila kano kidiro nafs haja for examples han numers mn 1 hta 5 kirja3o "weekday" so f 3iwad man dir kola whada f case jma3nahom 
+o f had mital chfna anoho n9daro nrja3o value dyal switch l chi varibale 4ir dir somicolon f lakhr
+			|
+			v 
+
+String day = switch (number) {
+	case 1, 2, 3, 4, 5 -> "weekday";
+	case 6, 7 -> "weekend";
+	default -> "not a valid day";
+};
+
+
+
+------------------------->    this is section we will see overloaded methods  ------------------------->
+
+
+verloaded methods = methods (like function) that share the same name , but differrent parameteres 
+
+
+static Double add(double a, double b)
+{
+	returun (a + b);
+}
+
+static Double add(double a, double b, double c)
+{
+	returun (a + b + c);
+}
+
+so here we have two methods whit the same name but fifferrent arguments if you call add(1, 5) whit 2 argumenst you will call this fiest methods
+and if you call it whit 3 argumenst add(1 , 4 , 7) you will call the second method 
+
+
+
+------------------------->    this is section we will see arrays ------------------------->
+
+
+how to declare an array in java -> type[] name = {value1, value2, value3};
+
+for example -> 					    String[] fruits = {"banana", "appele", "orange"};
+
+this is methos called length return the number of element in arrays 
+for exmple -> int lenght = fruits.length -> now lenght = 3 
+
+for loop throught this is array this is simple while called i think enhanxed loop like this 
+											|
+										 	v
+								String[] fruits = {"banana", "appele", "orange"}
+
+								for(String lala : fruits)
+									System.out.println(lala);
+
+there is a lot of methods for arrays you can see theme in w3school
+
+
+
+------------------------->    this is section we will varargs (function take a varible number of argumenst like printf) ------------------------->
+
+
+to declare it like this 
+
+	static void add(int...nums)
+	{	
+		int result = 0;
+		for(int num : nums)
+			result += num;
+		System.out.println("this is the tatal -> " + result);
+	}
+
+so the ... tell the compiler that i dont know the number of arguments 
+and all the arguments store in the arra (in this is example the array is nums)
+
+
+
+
+------------------------->    this is section we see static keyword in java ------------------------->
+
+🧠 What is static in Java?
+The static keyword in Java means:
+
+"This belongs to the class, not to instances (objects) of the class."
+
+So:
+
+ *Static variables are shared across all instances.
+
+ *Static methods can be called without creating an object.
+
+ *Static blocks run once when the class is loaded.
+
+--------------------------------------------------------------------------------
+
+❗️Important Rules
+Java supports single inheritance (one class can only extend one class).
+
+You can use interfaces for multiple inheritance of type (we can discuss this separately if you want).
+
+Constructors are not inherited, but you can call them using super().
+
+--------------------------------------------------------------------------------
+
+
+
+
